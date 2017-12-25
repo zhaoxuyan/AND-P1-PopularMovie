@@ -42,7 +42,7 @@ public class NetworkUtils {
     /**
      * 提供你的API_KEY
      */
-    final static String API_KEY = "9b5ebb10f97de834cd53fe9ea4cc39eb";
+    
 
     public static URL buildUrl(String path) {
         Uri builtUri = Uri.parse(MOVIE_BASIC_URL).buildUpon()
