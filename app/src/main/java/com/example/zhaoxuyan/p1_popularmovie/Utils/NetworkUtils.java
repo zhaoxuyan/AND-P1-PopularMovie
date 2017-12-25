@@ -41,6 +41,7 @@ public class NetworkUtils {
     final static String API_KEY_PARM = "api_key";
     /**
      * 提供你的API_KEY
+     * final static String API_KEY = ""
      */
     
 
