@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detail_title_size">22sp</dimen>
+    <dimen name="detail_releasedate_size">18sp</dimen>
+    <dimen name="detail_score_size">18sp</dimen>
+    <dimen name="detail_overview_size">17sp</dimen>
+</resources>

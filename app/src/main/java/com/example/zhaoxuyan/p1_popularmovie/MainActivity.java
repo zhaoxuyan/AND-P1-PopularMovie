@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         // 是否有网络链接
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
-
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         // If there is a network connection, fetch data
         if (networkInfo != null && networkInfo.isConnected()) {

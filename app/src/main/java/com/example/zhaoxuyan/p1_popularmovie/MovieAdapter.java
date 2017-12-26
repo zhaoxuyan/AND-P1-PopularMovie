@@ -41,7 +41,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
     @Override
     public void onBindViewHolder(MovieAdapterViewHolder holder, int position) {
         String currentMovie = mMovieData[position];
-        String[] parts = currentMovie.split("-");
+        String[] parts = currentMovie.split("#");
         String moviePosterPath = parts[1];
         // Ex: https://image.tmdb.org/t/p/w185/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg
         Picasso.with(context)
@@ -84,12 +84,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
         public void onClick(View v) {
             int adapterPosition = getAdapterPosition();
             String currentMovie = mMovieData[adapterPosition];
-            String[] parts = currentMovie.split("-");
-            String movieDetail = parts[0] + "-"
-                    + parts[1] + "-"
-                    + parts[2] + "-"
-                    + parts[3] + "-"
-                    + parts[5] + "-";
+            String[] parts = currentMovie.split("#");
+            String movieDetail = parts[0] + "#"
+                    + parts[1] + "#"
+                    + parts[2] + "#"
+                    + parts[3] + "#"
+                    + parts[5] + "#";
 
             mClickHandler.onClick(movieDetail);
         }

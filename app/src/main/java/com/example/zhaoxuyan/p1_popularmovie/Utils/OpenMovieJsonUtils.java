@@ -47,11 +47,11 @@ public final class OpenMovieJsonUtils {
             String movieRelease = movieObject.getString(MOVIE_RELEASE);
 
             parsedMovieData[i] =
-                    movieTitle + "-"
-                            + moviePoster + "-"
-                            + movieOverview + "-"
-                            + movieScore + "-"
-                            + moviePopularity + "-"
+                    movieTitle + "#"
+                            + moviePoster + "#"
+                            + movieOverview + "#"
+                            + movieScore + "#"
+                            + moviePopularity + "#"
                             + movieRelease;
         }
         return parsedMovieData;

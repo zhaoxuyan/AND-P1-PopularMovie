@@ -41,9 +41,9 @@ public class NetworkUtils {
     final static String API_KEY_PARM = "api_key";
     /**
      * 提供你的API_KEY
-     * final static String API_KEY = ""
+     * final static String API_KEY = "[YOUR_AIP_KEY]"
      */
-    
+
 
     public static URL buildUrl(String path) {
         Uri builtUri = Uri.parse(MOVIE_BASIC_URL).buildUpon()
@@ -66,6 +66,10 @@ public class NetworkUtils {
     public static String getResponseFromHttpUrl(URL url) throws IOException {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
+            // set the connection timeout to 5 seconds and the read timeout to 5 seconds
+            urlConnection.setConnectTimeout(5000);
+            urlConnection.setReadTimeout(5000);
+
             InputStream in = urlConnection.getInputStream();
 
             Scanner scanner = new Scanner(in);

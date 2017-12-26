@@ -44,10 +44,11 @@ public class DetailActivity extends AppCompatActivity {
         if (intentThatStartedThisActivity != null) {
             if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
                 String detailString = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT);
-                String[] parts = detailString.split("-");
+                String[] parts = detailString.split("#");
                 Picasso.with(this)
                         .load("https://image.tmdb.org/t/p/w342" + parts[1])
                         .into(mPoster);
+                getSupportActionBar().setTitle(parts[0]);
                 mTitle.setText(parts[0]);
                 mReleaseDate.setText(parts[4]);
                 mScore.setText(parts[3] + " / 10");
